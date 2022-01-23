@@ -1,0 +1,116 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  font-size: 45px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 40px 80px;
+  overflow: hidden;
+  margin: 20px;
+  border: 5px solid black;
+}
+
+.rotate-btn-effect {
+  position: relative;
+}
+
+.rotate-btn-effect:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff200;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+.rotate-btn-effect:hover:before {
+  transform: rotate(0deg);
+}
+
+.swipe-btn-effect {
+  position: relative;
+  color: black;
+  transition: color 1s ease;
+}
+
+.swipe-btn-effect:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #351435;
+  height: calc(100%);
+  width: 100%;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: transform 1s;
+}
+
+.swipe-btn-effect:hover:before {
+  transform: translateY(0%);
+  color: white;
+}
+
+.swipe-btn-effect:hover {
+  color: white;
+}
+
+
+.stretch-effect {
+  letter-spacing: 2px;
+  position: relative;
+  transition: 1s;
+}
+
+.stretch-effect:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+
+.stretch-effect:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateY(90deg);
+  z-index: -1;
+}
+
+.stretch-effect:hover:before {
+  transform: rotateX(0deg);
+}
+
+.stretch-effect:hover:after {
+  transform: rotateY(0deg);
+}
+
+.stretch-effect:hover {
+  color: white;
+}

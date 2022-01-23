@@ -1,0 +1,6 @@
+transition-timing-function:
+  ease: the change starts slow and go faster then finish flow
+  linear: the change occurs at the same rate
+  ease-in: the change starts slow and go faster at the end
+  ease-out: start fast and slow at the end
+  ease-in-out: start slow and go faster and finish slow
